@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سياسة الخصوصية — وفّر</title>
+<meta name="description" content="سياسة الخصوصية الخاصة بتطبيق وفّر لإدارة الأموال الشخصية.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B1420;
+    --surface:#101B2A;
+    --surface-raised:#16233c;
+    --gold:#C9A84C;
+    --gold-light:#E7CD8C;
+    --cream:#F4EFE3;
+    --mist:#7F9BB5;
+    --green:#4ADE80;
+    --line: rgba(201,168,76,0.28);
+    --radius: 18px;
+    --maxw: 900px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+  body{
+    background:var(--ink);
+    color:var(--cream);
+    font-family:'IBM Plex Sans Arabic', sans-serif;
+    line-height:1.9;
+    overflow-x:hidden;
+  }
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    background:
+      radial-gradient(ellipse 700px 500px at 85% -5%, rgba(201,168,76,0.10), transparent 60%),
+      radial-gradient(ellipse 600px 500px at 10% 15%, rgba(46,134,193,0.08), transparent 60%);
+    pointer-events:none;
+    z-index:0;
+  }
+  a{color:inherit; text-decoration:none;}
+  ::selection{background:var(--gold); color:var(--ink);}
+  :focus-visible{outline:2px solid var(--gold); outline-offset:3px; border-radius:4px;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px; position:relative; z-index:1;}
+
+  header{
+    position:sticky; top:0; z-index:50;
+    backdrop-filter:blur(14px);
+    background:rgba(11,20,32,0.72);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    max-width:1120px; margin:0 auto; padding:16px 28px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .brand{display:flex; align-items:center; gap:10px; font-family:'El Messiri',sans-serif; font-weight:700; font-size:20px;}
+  .brand .mark{
+    width:34px; height:34px; border-radius:9px;
+    background:linear-gradient(155deg, var(--surface-raised), var(--surface));
+    border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'El Messiri',sans-serif; font-weight:700; color:var(--gold); font-size:16px;
+  }
+  nav.links{display:flex; gap:28px; font-size:15px; color:var(--mist);}
+  nav.links a:hover{color:var(--gold);}
+  @media (max-width:760px){ nav.links{display:none;} }
+
+  main{padding:64px 0 40px;}
+  .page-head{margin-bottom:44px; text-align:center;}
+  .hairline-label{
+    display:inline-flex; flex-direction:column; align-items:center; gap:6px;
+    font-size:13px; letter-spacing:0.14em; color:var(--gold);
+    font-weight:600; margin-bottom:18px;
+  }
+  .hairline-label span:first-child, .hairline-label span:last-child{
+    display:block; width:46px; height:1px; background:linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  h1{font-family:'El Messiri', sans-serif; font-weight:700; font-size:clamp(28px,4.5vw,42px); color:var(--cream); margin-bottom:14px;}
+  .effective{font-size:14px; color:var(--mist);}
+
+  .policy{
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+    padding:40px clamp(20px,4vw,48px);
+  }
+  .policy h2{
+    font-family:'El Messiri', sans-serif; font-weight:600; font-size:20px; color:var(--gold);
+    margin:36px 0 12px;
+  }
+  .policy h2:first-child{margin-top:0;}
+  .policy p{font-size:15.5px; color:var(--mist); margin-bottom:14px;}
+  .policy ul{margin:0 0 14px; padding-inline-start:22px; display:flex; flex-direction:column; gap:8px;}
+  .policy li{font-size:15.5px; color:var(--mist);}
+  .policy a{color:var(--gold); border-bottom:1px solid transparent;}
+  .policy a:hover{border-color:var(--gold);}
+  .policy hr{border:none; border-top:1px solid var(--line); margin:32px 0 18px;}
+  .policy .credit{font-size:12.5px; color:var(--mist); opacity:0.7;}
+
+  footer{border-top:1px solid var(--line); padding:44px 0; margin-top:40px;}
+  .foot-row{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
+  .foot-links{display:flex; gap:22px; font-size:14px; color:var(--mist); flex-wrap:wrap; align-items:center;}
+  .foot-links a:hover{color:var(--gold);}
+  .copyright{font-size:13px; color:var(--mist);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand"><span class="mark">و</span> وفّر</div>
+    <nav class="links">
+      <a href="index.html#features">الميزات</a>
+      <a href="index.html#screenshots">لقطات الشاشة</a>
+      <a href="privacy.html">الخصوصية</a>
+      <a href="terms.html">الشروط</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="page-head">
+      <div class="hairline-label"><span></span>قانوني<span></span></div>
+      <h1>سياسة الخصوصية</h1>
+      <div class="effective">سارية اعتبارًا من 4 يوليو 2026</div>
+    </div>
+
+    <div class="policy">
+      <p>تنطبق سياسة الخصوصية هذه على تطبيق وفّر للأجهزة المحمولة، وأي خدمات مرتبطة به يديرها أحمد المطيري (يُشار إليها مجتمعة بـ"التطبيق"). يُشار إلى أحمد المطيري هنا بـ"مزوّد الخدمة".</p>
+
+      <h2>جمع المعلومات واستخدامها</h2>
+      <p>يقوم التطبيق بجمع بعض المعلومات عند تنزيله واستخدامه، وقد تشمل هذه المعلومات:</p>
+      <ul>
+        <li>عنوان بروتوكول الإنترنت (IP) الخاص بجهازك</li>
+        <li>صفحات التطبيق التي تزورها، وتاريخ ووقت الزيارة، والوقت الذي تقضيه فيها</li>
+        <li>الوقت الإجمالي الذي تقضيه في استخدام التطبيق</li>
+        <li>نظام تشغيل الجهاز المحمول الذي تستخدمه</li>
+      </ul>
+
+      <h2>ملفات تعريف الارتباط وتقنيات التتبع</h2>
+      <p>قد يستخدم التطبيق أو أدوات الطرف الثالث (SDKs) الخاصة به ملفات تعريف الارتباط، وحزم SDK، والبكسلات، وتقنيات مشابهة لدعم الوظائف والتحليلات وتقديم الخدمة. وحيثما يقتضي القانون المعمول به ذلك، سيحصل مزوّد الخدمة على موافقتك قبل استخدام تقنيات التتبع غير الأساسية.</p>
+
+      <h2>حقوقك</h2>
+      <p>يمكنك طلب الوصول إلى بياناتك الشخصية لدى مزوّد الخدمة، أو تصحيحها، أو حذفها. لممارسة هذه الحقوق، أو لسحب موافقتك في الحالات التي تستند فيها المعالجة إلى الموافقة، يرجى التواصل مع مزوّد الخدمة عبر <a href="mailto:asmyard@gmail.com">asmyard@gmail.com</a>.</p>
+
+      <h2>حقوق خصوصية سكان كاليفورنيا (CCPA/CPRA)</h2>
+      <p>إذا كنت مقيمًا في ولاية كاليفورنيا، فلديك الحق في معرفة المعلومات الشخصية التي يتم جمعها، والحق في حذف معلوماتك الشخصية، والحق في الاعتراض على بيع أو مشاركة معلوماتك الشخصية، والحق في عدم التمييز ضدك لممارستك لهذه الحقوق. لممارسة حقوقك بموجب CCPA/CPRA، تواصل مع مزوّد الخدمة عبر <a href="mailto:asmyard@gmail.com">asmyard@gmail.com</a>.</p>
+
+      <p>قد يستخدم مزوّد الخدمة المعلومات التي تقدمها لإرسال معلومات مهمة، وإشعارات مطلوبة، وحيثما يسمح القانون بذلك، رسائل تسويقية.</p>
+
+      <p>لتقديم تجربة أفضل أثناء استخدام التطبيق، قد يطلب مزوّد الخدمة منك تقديم معلومات معينة تُعرّف هويتك. سيتم الاحتفاظ بهذه المعلومات واستخدامها وفق ما هو موضّح في سياسة الخصوصية هذه.</p>
+
+      <h2>وصول الأطراف الثالثة</h2>
+      <p>يتم بشكل دوري نقل بيانات مجمّعة ومجهولة الهوية فقط إلى خدمات خارجية لمساعدة مزوّد الخدمة على تحسين التطبيق وخدماته. قد يشارك مزوّد الخدمة معلوماتك مع أطراف ثالثة بالطرق الموضّحة في بيان الخصوصية هذا.</p>
+
+      <h2>نقل البيانات الدولي</h2>
+      <p>قد يقوم مزوّد الخدمة أو مزوّدو خدماته من الأطراف الثالثة بنقل البيانات الشخصية إلى دول خارج بلد إقامتك، بما في ذلك خارج المنطقة الاقتصادية الأوروبية (EEA). وحيثما يتطلب القانون المعمول به ضمانات لعمليات النقل الدولي، سيستخدم مزوّد الخدمة الآليات المناسبة، ومنها:</p>
+      <ul>
+        <li>البنود التعاقدية القياسية (SCCs) المعتمدة من المفوضية الأوروبية</li>
+        <li>قرارات الملاءمة أو آليات النقل المعترف بها قانونيًا الأخرى</li>
+        <li>موافقتك، حيثما تكون مطلوبة ومسموحًا بها قانونيًا</li>
+      </ul>
+      <p>قد تختلف قوانين حماية البيانات في الدول الأخرى عن تلك المعمول بها في بلدك. وحيثما يقتضي القانون ذلك، سيطبّق مزوّد الخدمة الضمانات المناسبة ويحصل على أي موافقة مطلوبة لعملية النقل.</p>
+
+      <p>قد يفصح مزوّد الخدمة عن المعلومات المقدَّمة من المستخدم والمجمّعة تلقائيًا في الحالات التالية:</p>
+      <ul>
+        <li>عند اقتضاء القانون ذلك، مثل الامتثال لأمر استدعاء قضائي أو إجراء قانوني مشابه</li>
+        <li>عندما يعتقد مزوّد الخدمة بحسن نية أن الإفصاح ضروري لحماية حقوقه، أو حماية سلامتك أو سلامة الآخرين، أو التحقيق في الاحتيال، أو الاستجابة لطلب حكومي</li>
+        <li>مع مزوّدي الخدمات الموثوقين الذين يعملون نيابة عنه، ولا يستخدمون هذه المعلومات لأغراضهم الخاصة، وقد وافقوا على الالتزام بالقواعد الواردة في بيان الخصوصية هذا</li>
+      </ul>
+
+      <h2>حقوق إلغاء الاشتراك</h2>
+      <p>يمكنك إيقاف جمع المزيد من المعلومات من جهازك المحمول عن طريق إلغاء تثبيت التطبيق. لن يؤدي إلغاء التثبيت إلى حذف المعلومات المرسلة مسبقًا إلى مزوّد الخدمة أو إلى أطراف ثالثة تلقائيًا.</p>
+      <p>لطلب حذف بياناتك الشخصية، أو سحب موافقتك، أو ممارسة أي من حقوقك، تواصل مع مزوّد الخدمة عبر <a href="mailto:asmyard@gmail.com">asmyard@gmail.com</a>.</p>
+
+      <h2>سياسة الاحتفاظ بالبيانات</h2>
+      <p>يحتفظ مزوّد الخدمة بالبيانات الشخصية بناءً على ضرورتها للأغراض المذكورة:</p>
+      <ul>
+        <li>البيانات المقدَّمة من المستخدم: يُحتفظ بها طوال مدة استخدامك للتطبيق بالإضافة إلى 12 شهرًا بعد ذلك، ما لم يتطلب القانون مدة أطول</li>
+        <li>البيانات المجمّعة تلقائيًا: يُحتفظ بها لمدة تصل إلى 24 شهرًا من تاريخ الجمع، ما لم يتطلب الامتثال القانوني مدة أطول</li>
+        <li>البيانات المجمّعة والمجهولة الهوية: يُحتفظ بها إلى أجل غير مسمى لأنها لم تعد تحدد هويتك</li>
+        <li>البيانات المطلوبة للامتثال القانوني: يُحتفظ بها طالما اقتضى القانون المعمول به ذلك</li>
+      </ul>
+      <p>يمكنك طلب حذف بياناتك الشخصية، مع مراعاة أي التزام قانوني بالاحتفاظ بها. إذا رغبت في أن يحذف مزوّد الخدمة البيانات التي قدمتها من خلال التطبيق، يرجى التواصل معه عبر <a href="mailto:asmyard@gmail.com">asmyard@gmail.com</a>. يُرجى ملاحظة أن بعض البيانات المقدَّمة من المستخدم قد تكون ضرورية لعمل التطبيق بشكل صحيح.</p>
+
+      <h2>الأطفال</h2>
+      <p>لا يستهدف التطبيق الأطفال دون سن 18 عامًا، أو السن الأعلى الذي يتطلبه القانون المعمول به. لا يقوم مزوّد الخدمة عمدًا بجمع بيانات من الأطفال أو تسويق التطبيق لهم.</p>
+      <p>لا يقوم مزوّد الخدمة عمدًا بجمع معلومات تُعرّف هوية الأطفال. يشجّع مزوّد الخدمة جميع الأطفال على عدم تقديم أي معلومات تعرّف هويتهم عبر التطبيق و/أو خدماته. كما يشجّع مزوّد الخدمة الآباء وأولياء الأمور على مراقبة استخدام أطفالهم للإنترنت والمساعدة في تطبيق هذه السياسة من خلال توجيه أطفالهم إلى عدم تقديم معلومات تعرّف هويتهم دون إذنهم. إذا كان لديك سبب للاعتقاد بأن طفلاً قد قدّم معلومات تعرّف هويته لمزوّد الخدمة عبر التطبيق و/أو خدماته، يُرجى التواصل مع مزوّد الخدمة عبر <a href="mailto:asmyard@gmail.com">asmyard@gmail.com</a> حتى يتمكن من اتخاذ الإجراءات اللازمة. إذا كان عمرك أقل من 18 عامًا، يجب أن يقدّم أحد والديك أو ولي أمرك الموافقة نيابة عنك حيثما يسمح القانون بذلك.</p>
+
+      <h2>الأمان</h2>
+      <p>يحرص مزوّد الخدمة على الحفاظ على سرية معلوماتك. ويوفّر ضمانات مادية وإلكترونية وإجرائية لحماية المعلومات التي يعالجها ويحتفظ بها.</p>
+
+      <h2>الإخطار بخرق البيانات</h2>
+      <p>في حال وقوع خرق للبيانات يؤثر على بياناتك الشخصية، سيقوم مزوّد الخدمة بإخطارك وفقًا للمتطلبات القانونية المعمول بها، بما يشمل، حيثما يقتضي الأمر، معلومات عن طبيعة الخرق والخطوات المتخذة لمعالجته.</p>
+
+      <h2>التغييرات</h2>
+      <p>قد يقوم مزوّد الخدمة بتحديث سياسة الخصوصية هذه من وقت لآخر. سيقوم بإخطارك بأي تغييرات جوهرية عن طريق نشر سياسة الخصوصية المحدَّثة مع تاريخ سريانها. وحيثما يقتضي القانون ذلك، سيسعى مزوّد الخدمة للحصول على موافقتك على التغييرات الجوهرية قبل سريانها.</p>
+      <p>سيتم الاحتفاظ بالنسخ السابقة من سياسة الخصوصية هذه وإتاحتها عند الطلب من خلال التواصل مع مزوّد الخدمة عبر <a href="mailto:asmyard@gmail.com">asmyard@gmail.com</a>.</p>
+
+      <h2>موافقتك</h2>
+      <p>حيثما تستند المعالجة إلى الموافقة، فإنك تقدّم هذه الموافقة عن طريق الاختيار الصريح لتفعيل الميزة أو الإجراء المعني. يمكنك سحب موافقتك في أي وقت دون أن يؤثر ذلك على المعالجة التي تمّت قبل السحب. أما المعالجة المستندة إلى أسس قانونية أخرى فتستمر وفق ما هو موضّح أعلاه.</p>
+
+      <h2>تواصل معنا</h2>
+      <p>إذا كانت لديك أي أسئلة بخصوص الخصوصية أثناء استخدام التطبيق، أو استفسارات حول ممارساتنا، يُرجى التواصل مع مزوّد الخدمة عبر البريد الإلكتروني: <a href="mailto:asmyard@gmail.com">asmyard@gmail.com</a>.</p>
+
+      <hr>
+      <p class="credit">تم إنشاء صفحة سياسة الخصوصية هذه بالاستعانة بأداة App Privacy Policy Generator.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <div class="brand" style="font-size:16px;"><span class="mark" style="width:28px;height:28px;font-size:13px;">و</span> وفّر</div>
+      <div class="foot-links">
+        <a href="privacy.html">الخصوصية</a>
+        <a href="terms.html">الشروط</a>
+        <a href="mailto:asmyard@gmail.com">راسلنا</a>
+      </div>
+      <div class="copyright">© 2026 وفّر. جميع الحقوق محفوظة.</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
